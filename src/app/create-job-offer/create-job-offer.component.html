@@ -1,0 +1,16 @@
+<body>
+<form style="display: inline-grid;">
+<input type="text" [(ngModel)]="title" name="title" placeholder="Titolo">
+<input type="text" [(ngModel)]="description" name="description" placeholder="Descrizione">
+<input type="text" [(ngModel)]="city" name="city" placeholder="Città">
+<input type="text" [(ngModel)]="companyName" name="companyName" placeholder="Nome Azienda">
+<input type="text" [(ngModel)]="sector" name="sector" placeholder="Settore lavorativo">
+<input type="text" [(ngModel)]="degreeTitle" name="degreeTitle" placeholder="Titolo di Studio necessario">
+<input type="text" [(ngModel)]="workingTime" name="workingTime" placeholder="Orario lavorativo">
+<input type="text" [(ngModel)]="contractType" name="contractType" placeholder="Tipologia di contratto">
+<input type="text" [(ngModel)]="telephoneNumber" name="telephoneNumber" placeholder="Numero di telefono">
+<input type="date" [(ngModel)]="jobOfferDate" name="jobOfferDate" placeholder="Data dell'annuncio">
+<button (click)="createJobOffer()"> Aggiungi</button>
+</form>
+<div *ngIf="response.httpStatus == 'OK'" style="background: green;width: max-content;margin-top: inherit;">{{response.message}}</div>
+</body>

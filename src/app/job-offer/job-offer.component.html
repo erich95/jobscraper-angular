@@ -1,0 +1,31 @@
+<!-- <h1>{{title}}</h1> -->
+<!-- <p>job-offer works!</p> -->
+<html>
+<body>
+  <h1>Job Offers list</h1>
+  <table style="display: grid; grid-column-gap: 10px; grid-row-gap: 10px; align-content: center; align-items: center; justify-content: space-around; justify-items: center;" class="rwd-table">
+    <tr>
+        <th>Titolo:</th>
+        <th>Descrizione:</th>
+        <th>Città:</th>
+        <th>Nome azienda:</th>
+        <th>Settore:</th>
+        <th>Titolo di studio:</th>
+        <th>Orario lavorativo:</th>
+        <th>Numero di telefono:</th>
+        <th>Data annuncio:</th>
+    </tr>
+    <div *ngFor="let item of jobOffersList">        
+        <td>{{item.title}}</td>
+        <td>{{item.description}}</td>
+        <td>{{item.city}}</td>
+        <td>{{item.companyName}}</td>
+        <td>{{item.sector}}</td>
+        <td>{{item.degreeTitle}}</td>
+        <td>{{item.workingTime}}</td>
+        <td>{{item.telephoneNumber}}</td>
+        <td>{{item.jobOfferDate}}</td>
+      </div>
+  </table>
+</body>
+</html>
